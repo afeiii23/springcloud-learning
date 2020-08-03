@@ -1,0 +1,19 @@
+server:
+  port: 1101
+
+
+spring:
+  application:
+    name: feign-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        enabled: true
+        service: ${spring.application.name}
+zuul:
+  routes:
+    nacos-provider:
+      path:
+        /**
+      url: http://localhost:9989/
