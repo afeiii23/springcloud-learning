@@ -1,4 +1,4 @@
-package com.curry.warrior.letcode.swordpoint;
+package swordpoint;
 
 /**
  * @Package com.curry.warrior.swordpoint
