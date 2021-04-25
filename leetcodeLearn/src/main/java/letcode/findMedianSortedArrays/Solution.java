@@ -1,7 +1,8 @@
-package findMedianSortedArrays;
+package letcode.findMedianSortedArrays;
+
 
 /**
- * @Package findMedianSortedArrays
+ * @Package letcode.findMedianSortedArrays
  * @author: xule
  * @date: 2020/8/4 10:27
  */
@@ -51,6 +52,58 @@ public class Solution {
 
 //    111
 //    222
+
+    public static ListNode reverseKGroup(ListNode head, int k) {
+        ListNode first = new ListNode(0);
+        ListNode prev = null,curr = head,next = null;
+        first.next = head;
+        ListNode splitNode = head;
+        int i = 0;
+        while (splitNode != null && i < k) {
+            i++;
+            splitNode = splitNode.next;
+        }
+        int j = 0;
+        if (i == k) {
+            // 进行翻转
+            while (curr != null &&  j < i) {
+                next = curr.next;
+                curr.next = prev;
+                prev = curr;
+                curr = next;
+                j++;
+            }
+            if (next != null) {
+                head.next = reverseKGroup(next,k);
+            }
+            return prev;
+        }else {
+            return head;
+        }
+
+    }
+
+    public static void main(String[] args) {
+        ListNode l1 = new ListNode(1);
+        l1.next = new ListNode(2);
+        l1.next.next = new ListNode(3);
+        l1.next.next.next = new ListNode(4);
+        l1.next.next.next.next = new ListNode(5);
+        ListNode node = reverseKGroup(l1, 2);
+
+
+        while (node != null) {
+            System.out.println(node.val + "---");
+            node = node.next;
+        }
+    }
+
+
+      public static class ListNode {
+          int val;
+          ListNode next;
+          ListNode(int x) { val = x; }
+      }
 
 
 }

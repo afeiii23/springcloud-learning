@@ -39,7 +39,7 @@ public class AccessFilter extends ZuulFilter {
         RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();
 
-        System.out.println(String.format("send {} request to {}", request.getMethod(), request.getRequestURL().toString()));
+        System.out.println(String.format("send %s request to %s", request.getMethod(), request.getRequestURL().toString()));
 
         Object accessToken = request.getParameter("accessToken");
         if(accessToken == null) {

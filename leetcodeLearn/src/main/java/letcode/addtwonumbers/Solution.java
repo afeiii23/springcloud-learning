@@ -1,10 +1,7 @@
-package addtwonumbers;
-
-import java.util.Arrays;
-import java.util.List;
+package letcode.addtwonumbers;
 
 /**
- * @Package hot100.addtwonumbers
+ * @Package hot100.letcode.addtwonumbers
  * @author: xule
  * @date: 2020/7/31 16:25
  * 两数相加

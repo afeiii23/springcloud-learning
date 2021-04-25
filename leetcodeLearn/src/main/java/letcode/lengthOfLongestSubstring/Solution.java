@@ -1,4 +1,4 @@
-package lengthOfLongestSubstring;
+package letcode.lengthOfLongestSubstring;
 
 import java.util.HashMap;
 import java.util.Map;
