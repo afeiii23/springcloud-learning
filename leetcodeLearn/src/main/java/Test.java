@@ -31,9 +31,9 @@ class ThreadLocalLambdaDemo {
      */
     private static void safeDeposit() {
         SafeBank bank = new SafeBank();
-        Thread thread1 = new Thread(() -> bank.deposit(200), "张成瑶");
-        Thread thread2 = new Thread(() -> bank.deposit(200), "马云");
-        Thread thread3 = new Thread(() -> bank.deposit(500), "马化腾");
+        Thread thread1 = new Thread(() -> bank.deposit(200), "张**");
+        Thread thread2 = new Thread(() -> bank.deposit(200), "马*");
+        Thread thread3 = new Thread(() -> bank.deposit(500), "马**");
         thread1.start();
         thread2.start();
         thread3.start();
@@ -44,9 +44,9 @@ class ThreadLocalLambdaDemo {
      */
     private static void notSafeDeposit() {
         NotSafeBank bank = new NotSafeBank();
-        Thread thread1 = new Thread(() -> bank.deposit(200), "张成瑶");
-        Thread thread2 = new Thread(() -> bank.deposit(200), "马云");
-        Thread thread3 = new Thread(() -> bank.deposit(500), "马化腾");
+        Thread thread1 = new Thread(() -> bank.deposit(200), "张**");
+        Thread thread2 = new Thread(() -> bank.deposit(200), "马*");
+        Thread thread3 = new Thread(() -> bank.deposit(500), "马**");
         thread1.start();
         thread2.start();
         thread3.start();

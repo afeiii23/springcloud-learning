@@ -6,7 +6,7 @@ package swordpoint;
  * @date: 2021/4/13 下午2:32
  */
 public class ListNode {
-    int val;
-    ListNode next;
+    public int val;
+    public ListNode next;
     public ListNode(int x) { val = x; }
 }
